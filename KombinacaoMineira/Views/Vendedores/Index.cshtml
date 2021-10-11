@@ -1,0 +1,57 @@
+﻿@model IEnumerable<KombinacaoMineira.Models.Vendedor>
+@{
+    ViewData["Title"] = "Vendedores";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<a class="btn btn-default" asp-action="Create" >Adicionar</a>
+
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(p => p.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(p => p.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(p => p.Nascimento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(p => p.SalarioBase)
+            </th>
+            <th/>
+        </tr>
+    </thead
+    <tbody>
+        @foreach(var item in Model)
+            {
+        <tr>
+            <td>
+                @Html.DisplayFor(p => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(p => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(p => item.Nascimento)
+            </td>
+            <td>
+                @Html.DisplayFor(p => item.SalarioBase)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a>
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a>
+                <a asp-action="Delete"asp-route-id="@item.Id">Deletar</a>
+            </td>
+        </tr>
+            }
+    </tbody>
+
+
+
+
+</table>
+

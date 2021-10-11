@@ -1,0 +1,50 @@
+﻿@model KombinacaoMineira.Models.Vendedor
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h2>@ViewData["Title"]</h2>
+<h4> Detalhes</h4>
+<hr />
+
+<dl class="dl-horizontal">
+    <dt>
+        @Html.DisplayNameFor(p => p.Nome)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(p => p.Nome)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(p => p.Email)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(p => p.Email)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(p => p.Nascimento)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(p => p.Nascimento)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(p => p.SalarioBase)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(p => p.SalarioBase)
+    </dd>
+    <dt>
+        @Html.DisplayNameFor(p => p.Departamento.Nome)
+    </dt>
+
+    <dd>
+        @Html.DisplayFor(p => p.Departamento.Nome)
+    </dd>
+
+</dl>
+</div>
+<a asp-action="Edit" value="Editar" class="btn btn-default">Editar</a>
+<a asp-action="">Voltar</a>

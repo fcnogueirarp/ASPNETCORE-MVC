@@ -1,0 +1,54 @@
+﻿@model KombinacaoMineira.Models.Vendedor
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<h4>Tem Certeza que quer deletar?</h4>
+
+<div>
+    <h4>Vendedor</h4>
+    <hr/>
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(p => p.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(p => p.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(p => p.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(p => p.Email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(p => p.Nascimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(p => p.Nascimento)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(p => p.SalarioBase)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(p => p.SalarioBase)
+        </dd>
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <input class="btn btn-danger" type="submit" value="Deletar" />
+            <a asp-action="">Voltar</a>
+            
+        </form>
+        
+
+    </dl>
+</div>
+
